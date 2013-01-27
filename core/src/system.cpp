@@ -211,6 +211,26 @@ IPPInitializer ippInitializer;
 volatile bool USE_SSE2 = featuresEnabled.have[CV_CPU_SSE2];
 volatile bool USE_SSE4_2 = featuresEnabled.have[CV_CPU_SSE4_2];
 volatile bool USE_AVX = featuresEnabled.have[CV_CPU_AVX];
+volatile bool USE_NE10;// = featuresEnabled.have[CV_CPU_NE10];
+volatile bool USE_NEON;// = featuresEnabled.have[CV_CPU_NEON];
+
+void setUseNe10 (bool flag){
+	USE_NE10 = flag;
+}
+
+bool useNe10(void)
+{
+	return USE_NE10;
+}
+
+void setUseNEON (bool flag){
+	USE_NEON = flag;
+}
+
+bool useNEON(void)
+{
+	return USE_NEON;
+}
 
 void setUseOptimized( bool flag )
 {

@@ -341,6 +341,9 @@ static inline size_t alignSize(size_t sz, int n)
   \note{Since optimization may imply using special data structures, it may be unsafe
   to call this function anywhere in the code. Instead, call it somewhere at the top level.}
 */
+
+CV_EXPORTS_W void setUseNEON(bool onoff);
+CV_EXPORTS_W void setUseNe10(bool onoff);
 CV_EXPORTS_W void setUseOptimized(bool onoff);
 
 /*!
@@ -348,6 +351,8 @@ CV_EXPORTS_W void setUseOptimized(bool onoff);
 
   The function returns the current optimization status, which is controlled by cv::setUseOptimized().
 */
+CV_EXPORTS_W bool useNe10();
+CV_EXPORTS_W bool useNEON();
 CV_EXPORTS_W bool useOptimized();
 
 /*!

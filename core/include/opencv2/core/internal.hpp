@@ -149,15 +149,16 @@ CV_INLINE IppiSize ippiSize(int width, int height)
 #  endif
 
 
-//#if defined __NEON__
-
 #ifndef CV_NEON
 #include <arm_neon.h>
 #define CV_NEON 1
-//#define ANUVIS_TEST
 #endif
-//#endif
 
+#ifndef CV_NE10
+#include "../../../../NE10/inc/NE10_c.h"
+#include "../../../../NE10/inc/NE10_types.h"
+#define CV_NE10 1
+#endif
 
 
 #if defined ANDROID && defined __ARM_NEON__

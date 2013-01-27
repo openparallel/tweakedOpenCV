@@ -796,7 +796,7 @@ cvt_<float, short>( const float* src, size_t sstep,
                 _mm_storeu_si128((__m128i*)(dst + x),src1_int128);
             }
         }
-        #endif 
+        #endif
         
         #if CV_NEON //~4.5X
         
